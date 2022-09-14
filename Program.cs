@@ -15,14 +15,15 @@ namespace _8
             int numVal1 = 0;
             int totSuit = 0;
 
-            // string path = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName;
-            //string startupPath = System.IO.Directory.GetCurrentDirectory();
-            string strPath = Environment.CurrentDirectory;
+            //string strPath = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName;
+            string strPath = System.IO.Directory.GetCurrentDirectory();
+            //string strPath = Environment.CurrentDirectory;
             string filenamer = Path.Combine(strPath, "xyz.txt");
-            Console.WriteLine(filenamer);
             var dict = new Dictionary<string, int> { };
             using (var sr = new StreamReader(filenamer))
             {
+                //  Console.WriteLine(sr.ReadLine());
+
                 string line;
                 List<string> scoreResults = new List<string>();
                 List<string> nameResults = new List<string>();
@@ -30,11 +31,12 @@ namespace _8
                 {
                     if (!String.IsNullOrWhiteSpace(line))
                     {
-                        int charLocation = line.IndexOf(':',StringComparison.Ordinal);
+                        int charLocation = line.IndexOf(':', StringComparison.Ordinal);
                         if (charLocation > 0)
                         {
                             string name = line.Substring(0, charLocation);
                             int intFirstCard = charLocation - 3;
+
 
                             string Card1 = line.Substring(charLocation + 1, 2);
                             List<char> Card1List = new List<char>();
@@ -55,8 +57,6 @@ namespace _8
                             string Card5 = line.Substring(charLocation + 13, 2);
                             List<char> Card5List = new List<char>();
                             Card5List.AddRange(Card5);
-
-
                             int tot = calc(Card1List[0].ToString()) + calc(Card2List[0].ToString()) + calc(Card3List[0].ToString()) + calc(Card4List[0].ToString()) + calc(Card5List[0].ToString());
                             totSuit = calcSuit(Card1List[1].ToString()) + calcSuit(Card2List[1].ToString()) + calcSuit(Card3List[1].ToString()) + calcSuit(Card4List[1].ToString()) + calcSuit(Card5List[1].ToString());
                             dict.Add(name + "#" + totSuit, tot);
@@ -64,7 +64,7 @@ namespace _8
                         }
                         else
                         {
-                           finctionWrite("ERROR",0);
+                            finctionWrite("ERROR", 0);
                         }
                     }
                 }
@@ -72,6 +72,18 @@ namespace _8
             StringBuilder winner = new StringBuilder();
             int a = 0;
             var suitDict = new Dictionary<string, int> { };
+
+            foreach (KeyValuePair<string, int> kvp in dict)
+            {
+                if (dict.Values.Max() == kvp.Value)
+                {
+                    suitDict.Add(kvp.Key.Split("#")[0], Int32.Parse(kvp.Key.Split("#")[1]));
+                }
+
+            }
+
+
+
             foreach (KeyValuePair<string, int> kvp in suitDict)
             {
                 if (suitDict.Values.Max() == kvp.Value)
@@ -81,7 +93,10 @@ namespace _8
                     {
                         winner.Append(kvp.Key.Split("#")[0]);
                     }
-                    else { winner.Append("," + kvp.Key.Split("#")[0]); }
+                    else
+                    {
+                        winner.Append("," + kvp.Key.Split("#")[0]);
+                    }
                     int intWinners = winner.ToString().LastIndexOf(winner.ToString());
                     string stringWinner = winner.ToString().Substring(0, winner.ToString().Length - intWinners);
                     finctionWrite(stringWinner, dict.Values.Max());
@@ -111,7 +126,8 @@ namespace _8
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
-                }finally{}
+                }
+                finally { }
 
 
 
