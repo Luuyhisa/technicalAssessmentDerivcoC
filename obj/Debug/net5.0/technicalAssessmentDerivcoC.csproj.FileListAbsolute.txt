@@ -1,0 +1,16 @@
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\obj\Debug\net5.0\technicalAssessmentDerivcoC.csproj.AssemblyReference.cache
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\obj\Debug\net5.0\technicalAssessmentDerivcoC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\obj\Debug\net5.0\technicalAssessmentDerivcoC.AssemblyInfoInputs.cache
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\obj\Debug\net5.0\technicalAssessmentDerivcoC.AssemblyInfo.cs
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\obj\Debug\net5.0\technicalAssessmentDerivcoC.csproj.CoreCompileInputs.cache
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\bin\Debug\net5.0\technicalAssessmentDerivcoC.exe
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\bin\Debug\net5.0\technicalAssessmentDerivcoC.deps.json
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\bin\Debug\net5.0\technicalAssessmentDerivcoC.runtimeconfig.json
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\bin\Debug\net5.0\technicalAssessmentDerivcoC.runtimeconfig.dev.json
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\bin\Debug\net5.0\technicalAssessmentDerivcoC.dll
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\bin\Debug\net5.0\ref\technicalAssessmentDerivcoC.dll
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\bin\Debug\net5.0\technicalAssessmentDerivcoC.pdb
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\obj\Debug\net5.0\technicalAssessmentDerivcoC.dll
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\obj\Debug\net5.0\ref\technicalAssessmentDerivcoC.dll
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\obj\Debug\net5.0\technicalAssessmentDerivcoC.pdb
+C:\Users\lmkhasakhasa\Documents\8\technicalAssessmentDerivcoC\obj\Debug\net5.0\technicalAssessmentDerivcoC.genruntimeconfig.cache
