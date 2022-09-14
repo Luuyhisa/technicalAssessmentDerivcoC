@@ -11,12 +11,11 @@ namespace _8
         [STAThread]
         static void Main(string[] args)
         {
-            int
-                numVal = 0,
-                numVal1 = 0,
-                totSuit = 0;
+            int numVal = 0;
+            int numVal1 = 0;
+            int totSuit = 0;
 
-            string path = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName;
+            // string path = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName;
             //string startupPath = System.IO.Directory.GetCurrentDirectory();
             string strPath = Environment.CurrentDirectory;
             string filenamer = Path.Combine(strPath, "xyz.txt");
@@ -31,8 +30,7 @@ namespace _8
                 {
                     if (!String.IsNullOrWhiteSpace(line))
                     {
-                        int charLocation =
-                            line.IndexOf(':', StringComparison.Ordinal);
+                        int charLocation = line.IndexOf(':',StringComparison.Ordinal);
                         if (charLocation > 0)
                         {
                             string name = line.Substring(0, charLocation);
@@ -66,7 +64,7 @@ namespace _8
                         }
                         else
                         {
-                            //error
+                           finctionWrite("ERROR",0);
                         }
                     }
                 }
@@ -93,7 +91,7 @@ namespace _8
             {
                 try
                 {
-                    string filename = Path.Combine(path, "abc.txt");
+                    string filename = Path.Combine(strPath, "abc.txt");
                     File.Delete(filename);
                     StreamWriter sw = new StreamWriter(filename, true, Encoding.ASCII);
                     if ("Error".Equals(name))
@@ -113,7 +111,7 @@ namespace _8
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
-                }
+                }finally{}
 
 
 
